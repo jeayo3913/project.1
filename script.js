@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const lottoNumbersContainer = document.getElementById("lotto-numbers");
     const bonusContainer = document.getElementById("bonus-container");
     const bonusNumberContainer = document.getElementById("bonus-number");
+    const themeToggleBtn = document.getElementById("theme-toggle");
+
+    // 다크 모드 토글 로직
+    themeToggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+            themeToggleBtn.textContent = "☀️ 라이트 모드";
+        } else {
+            themeToggleBtn.textContent = "🌙 다크 모드";
+        }
+    });
 
     // 숫자 범위에 따른 색상 클래스 적용 (실제 동행복권 색상 기준)
     const getColorClass = (number) => {
