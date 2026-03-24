@@ -161,3 +161,70 @@ button:active {
         transform: scale(1);
     }
 }
+
+/* 제휴 문의 폼 스타일 */
+.contact-form {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+body.dark-mode .contact-form {
+    border-top-color: #333;
+}
+
+.contact-form h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+body.dark-mode .contact-form h2 {
+    color: #f1f2f6;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #2c3e50;
+    border-color: #4a6278;
+    color: #f1f2f6;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #95a5a6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 5px;
+}
